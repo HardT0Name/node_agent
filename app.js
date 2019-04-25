@@ -1,5 +1,11 @@
-var http = require('http');
-var agent = require("./agent");
+const http = require('http');
+const agent = require("./agent");
+const fs = require("fs");
+
+// const options = {
+//     pfx: fs.readFileSync('./server.pfx'),
+//     // passphrase: '',
+// };
 
 http.createServer(async function (request, response) {
     let body = await new Promise((resolve, reject) => {
